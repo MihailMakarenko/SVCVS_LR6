@@ -1,0 +1,24 @@
+@media screen and (width < 880px){
+    .location{
+        display: none;
+    }
+}
+
+
+@media screen and (width < 597px){
+    .messengers{
+        display: none;
+    }
+}
+
+@media screen and (width < 460px){
+    .profile{
+        order: -1;
+    }
+
+    .header-logo{
+        order: -1;
+    }
+
+}
+

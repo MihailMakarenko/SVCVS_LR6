@@ -1,0 +1,18 @@
+.location{
+    max-width: 300px;
+    color: white;
+    display: flex;
+    text-align: start;
+    vertical-align: top;
+    gap: 5px;
+}
+
+.location p{
+    height: 100%;
+    margin-top: 0px;
+    color: white;
+}
+.location svg{
+  
+    margin-top: 6px;
+}

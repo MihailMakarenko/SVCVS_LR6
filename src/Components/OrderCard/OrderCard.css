@@ -1,0 +1,98 @@
+.route-card-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-container{
+    max-width: 300px;
+    background-color: rgb(255, 255, 255);
+   
+}
+
+.time-container{
+    align-items: center;
+    margin-top: 7px;
+}
+
+.card-container{
+    margin: auto;
+    margin-top: 30px;
+    padding: 10px;
+}
+
+.information-carrier-container{
+    text-align: start;
+}
+
+.ticket-status{
+    vertical-align: center;
+
+}
+
+.button-container button{
+margin: 0;
+margin-right: 10px;
+}
+
+
+.card-container {
+    padding: 20px;
+    background-color: #ffffff; /* Белый фон */
+    border: 1px solid #e0e0e0; /* Светлая рамка */
+    border-radius: 8px; /* Закругленные углы */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Легкая тень */
+    max-width: 400px; /* Максимальная ширина */
+    margin: 20px auto; /* Центрирование */
+    font-family: Arial, sans-serif; /* Шрифт */
+  }
+  
+  .route-card-container {
+    display: flex; /* Гибкое выравнивание */
+    align-items: center; /* Вертикальное выравнивание */
+    justify-content: space-between; /* Пространство между элементами */
+    font-size: 18px; /* Размер шрифта */
+   margin-top: 10px;
+   margin-bottom: 5px;
+  }
+  
+  .time-container {
+    text-align: center; /* Центрирование текста */
+  }
+  
+  .date-container {
+    display: inline-block; /* Внутренний блок для выравнивания */
+    width: 77%; /* Ширина контейнера для даты */
+    margin: 0 10px; /* Отступы для разделения */
+  }
+  
+  .divider {
+    border: 1px solid gray; /* Цвет и стиль линии */
+    margin: 10px 0; /* Отступы сверху и снизу */
+  }
+  
+  .information-carrier-container {
+    margin: 15px 0; /* Отступ сверху и снизу */
+    font-size: 16px; /* Размер шрифта */
+    color: #555; /* Цвет текста */
+  }
+  
+  .action-button {
+    background-color: #007bff; /* Цвет фона кнопки */
+    border: none; /* Убираем рамку */
+    color: white; /* Цвет текста */
+    padding: 10px 20px; /* Внутренние отступы */
+    border-radius: 5px; /* Закругленные углы */
+    cursor: pointer; /* Указатель при наведении */
+    margin-right: 10px; /* Отступ между кнопками */
+    transition: background-color 0.3s; /* Плавный переход цвета */
+  }
+  
+  .action-button:hover {
+    background-color: #0056b3; /* Темный цвет при наведении */
+  }
+  
+  .ticket-status {
+    font-weight: bold; /* Жирный шрифт для статуса */
+    color: #28a745; /* Зеленый цвет для статуса */
+  }

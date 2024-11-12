@@ -1,0 +1,49 @@
+.section-information{
+    max-width: 221px;
+    text-align: start;
+
+margin-top: 0px;
+list-style-type: none;
+}
+
+.section-information h3{
+    color: yellow;
+}
+
+.section-information a:hover{
+color: rgba(17, 209, 216, 0.93);
+}
+
+.section-information ul{
+margin: 5px 0;
+}
+
+.section-information ul a{
+    color: white;
+    }
+
+.section-information ul{
+    padding-left: 0;
+    list-style-type: none;
+    margin-left: 0;
+}
+
+.section-information ul li{
+    margin-top: 10px;
+}
+
+.footer-up-container{
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+.footer-up-container h3{
+   text-align: start;
+}
+
+.footer-up-container p{
+    color: white;
+}

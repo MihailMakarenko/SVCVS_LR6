@@ -1,0 +1,15 @@
+.header-logo{
+    display: flex;
+    gap: 10px;
+    max-width: 180px;
+}
+
+.header-logo img{
+   height: 45px;
+   width: auto;
+   margin: auto;
+}
+
+.header-logo h3{
+    color: white;
+ }

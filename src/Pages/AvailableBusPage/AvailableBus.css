@@ -1,0 +1,343 @@
+.FormContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.FormContainer form {
+  margin-bottom: 20px;
+}
+
+.FlexDiv {
+  max-width: 170px;
+  justify-content: space-between;
+  display: flex;
+  gap: 10px;
+}
+
+.containerSchedule {
+  margin: auto;
+  margin-left: 0;
+  max-width: 300px;
+}
+
+.FlexDiv label {
+  margin: auto;
+  margin-left: 0;
+}
+
+.FormAddRoute {
+  max-width: 400px;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.FormAddRoute p {
+  color: black;
+}
+
+.CardBus {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+  max-width: 350px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+}
+
+.card-header {
+  font-size: 1.6em;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.card-details {
+  margin-bottom: 15px;
+}
+
+.card-details p {
+  margin: 6px 0;
+  font-size: 1em;
+  color: #555;
+}
+
+.card-price {
+  font-size: 1.4em;
+  color: #28a745;
+  font-weight: bold;
+  text-align: center;
+  margin: 10px 0;
+  border-top: 1px solid #e0e0e0;
+  padding-top: 10px;
+}
+
+.card-footer {
+  text-align: right;
+  font-size: 0.9em;
+  color: #777;
+}
+
+.card-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 2em;
+  color: #007bff;
+}
+
+.button-order {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 1em;
+  text-align: center;
+  display: block;
+  margin: 15px auto 0;
+  transition: background-color 0.3s;
+}
+
+.button-order:hover {
+  background-color: #0056b3;
+}
+
+.AddCardBus {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  display: block;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+input,
+select {
+  width: 98%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px 15px;
+  background-color: #2c28a7;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0px 10px;
+}
+
+.MainAvailableBus {
+  background-image: transparent;
+}
+
+form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: auto;
+}
+/* 
+form label {
+  display: block; 
+}
+
+ form input,
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+ form button {
+  padding: 10px 15px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+} */
+
+.modal-overlay {
+  display: flex;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 80%;
+  max-width: 500px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.ButtonCreateRoute {
+  margin-top: 15px;
+  margin-bottom: 20px;
+  background-color: #0056b3;
+}
+
+.ButtonCreateRoute:hover {
+  background-color: #004494;
+}
+
+.DivDisplayFlex {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.DivDisplayFlex label {
+  margin: auto;
+  margin-left: 0;
+}
+
+.DivDisplayFlex input {
+  margin: auto;
+}
+
+.TableContainer {
+  height: "300px";
+  margin-top: "20px";
+}
+
+.TableContainer {
+  margin-top: 10px;
+  max-height: 530px;
+  overflow-y: auto;
+}
+
+.TableClass {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.TableClass th,
+.TableClass td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+.MuiFormLabel-root label {
+  top: -7px;
+}
+
+.table-container-weekdays {
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+.WeekdaysTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.WeekdaysTable th,
+.WeekdaysTable td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+.WeekdaysTable th {
+  background-color: #f2f2f2;
+}
+
+.display-alert {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 12;
+}
+
+.modal {
+  display: block;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content-bus-info {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.close-button {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  position: fixed;
+  right: 0;
+  transform: translate(-37px, 29px);
+  z-index: 1;
+  color: black;
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.buttonTableClass {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}

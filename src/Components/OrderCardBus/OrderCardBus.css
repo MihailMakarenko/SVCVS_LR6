@@ -1,0 +1,56 @@
+.Order-card-bus {
+  padding: 11px;
+  margin: 20px;
+  background-color: #f9f9f9;
+  max-width: 200px;
+  position: relative;
+
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  background-image: url("https://grizly.club/uploads/posts/2023-01/1674680515_grizly-club-p-detskii-avtobus-klipart-1.png");
+  background-repeat: no-repeat;
+  /* color: white; */
+  background-size: 39%;
+  background-position-x: 30px;
+  background-position-y: 4px;
+}
+
+.Order-card-bus:hover {
+  transform: scale(1.05);
+}
+
+.Order-card-bus p {
+  text-align: start;
+}
+
+.vl {
+  position: absolute;
+  border-left: 4px dotted #000000;
+  height: 23px;
+  top: 71px;
+  left: 63px;
+}
+
+.Order-card-bus p svg {
+  vertical-align: bottom;
+}
+
+.price-container span {
+  white-space: nowrap;
+  margin-bottom: 10px;
+}
+
+.price-container {
+  margin-bottom: 10px;
+}
+
+.carrier-class {
+  text-align: start;
+  margin-bottom: 10px;
+}
+
+.dateDeparture-conatiner {
+  margin-left: auto;
+  max-width: 84px;
+}

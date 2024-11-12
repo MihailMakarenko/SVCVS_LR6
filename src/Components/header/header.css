@@ -1,0 +1,27 @@
+.header-class{
+    margin: auto;
+    background-color: #11263A;
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+  
+}
+
+.phone-number{
+    text-align: start;
+    color: white;
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
+.phone-number p{
+color: white;
+    margin-bottom: 5px;
+}
+
+.phone-number h3{
+    margin-top: 0px;
+}

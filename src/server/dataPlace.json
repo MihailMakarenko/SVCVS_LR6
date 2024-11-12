@@ -1,0 +1,173 @@
+{
+  "2024-11-10": [
+    {
+      "key": "1",
+      "name": "Место 1",
+      "reserved": true
+    },
+    {
+      "key": "2",
+      "name": "Место 2",
+      "reserved": true
+    },
+    {
+      "key": "3",
+      "name": "Место 3",
+      "reserved": false
+    },
+    {
+      "key": "4",
+      "name": "Место 4",
+      "reserved": false
+    },
+    {
+      "key": "5",
+      "name": "Место 5",
+      "reserved": false
+    },
+    {
+      "key": "6",
+      "name": "Место 6",
+      "reserved": false
+    },
+    {
+      "key": "7",
+      "name": "Место 7",
+      "reserved": false
+    },
+    {
+      "key": "8",
+      "name": "Место 8",
+      "reserved": false
+    },
+    {
+      "key": "9",
+      "name": "Место 9",
+      "reserved": false
+    },
+    {
+      "key": "10",
+      "name": "Место 10",
+      "reserved": false
+    }
+  ],
+  "2024-11-11": [
+    {
+      "key": "1",
+      "name": "Место 1",
+      "reserved": false
+    },
+    {
+      "key": "2",
+      "name": "Место 2",
+      "reserved": false
+    },
+    {
+      "key": "3",
+      "name": "Место 3",
+      "reserved": false
+    },
+    {
+      "key": "4",
+      "name": "Место 4",
+      "reserved": true
+    },
+    {
+      "key": "5",
+      "name": "Место 5",
+      "reserved": true
+    },
+    {
+      "key": "6",
+      "name": "Место 6",
+      "reserved": true
+    },
+    {
+      "key": "7",
+      "name": "Место 7",
+      "reserved": true
+    },
+    {
+      "key": "8",
+      "name": "Место 8",
+      "reserved": true
+    },
+    {
+      "key": "9",
+      "name": "Место 9",
+      "reserved": true
+    },
+    {
+      "key": "10",
+      "name": "Место 10",
+      "reserved": true
+    },
+    {
+      "key": "11",
+      "name": "Место 11",
+      "reserved": false
+    }
+  ],
+  "2024-11-12": [
+    {
+      "key": "1",
+      "name": "Место 1",
+      "reserved": false
+    },
+    {
+      "key": "2",
+      "name": "Место 2",
+      "reserved": true
+    },
+    {
+      "key": "3",
+      "name": "Место 3",
+      "reserved": true
+    },
+    {
+      "key": "4",
+      "name": "Место 4",
+      "reserved": false
+    },
+    {
+      "key": "5",
+      "name": "Место 5",
+      "reserved": false
+    },
+    {
+      "key": "6",
+      "name": "Место 6",
+      "reserved": false
+    },
+    {
+      "key": "7",
+      "name": "Место 7",
+      "reserved": false
+    },
+    {
+      "key": "8",
+      "name": "Место 8",
+      "reserved": false
+    },
+    {
+      "key": "9",
+      "name": "Место 9",
+      "reserved": false
+    },
+    {
+      "key": "10",
+      "name": "Место 10",
+      "reserved": false
+    },
+    {
+      "key": "11",
+      "name": "Место 11",
+      "reserved": false
+    },
+    {
+      "key": "12",
+      "name": "Место 12",
+      "reserved": false
+    }
+  ]
+}

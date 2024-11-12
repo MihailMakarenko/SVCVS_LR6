@@ -1,0 +1,29 @@
+.social-network{
+    margin: auto;
+    max-width: 200px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.ancors{
+    margin: auto;
+    display: flex;
+    margin-top: 10px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 742px;
+    gap: 10px;
+}
+
+.ancors a:hover{
+ color: rgba(17, 209, 216, 0.93);
+}
+
+.ancors a{
+   color: white;
+}
+
+.Logo:hover{
+    scale: 1.2;
+}

@@ -1,0 +1,14 @@
+.card-container-userPage{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.pagination-container{
+    display: flex;
+    justify-content: center;
+    max-width: 500px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

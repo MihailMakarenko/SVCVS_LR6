@@ -1,0 +1,60 @@
+.place-container {
+  max-width: 400px;
+  background-color: #ff7e5f;
+  margin: auto;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.place-container button:hover {
+  background-color: #2884ea;
+}
+
+.place {
+  display: block;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.place p {
+  vertical-align: middle;
+  color: black;
+  margin: auto;
+}
+
+.row-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.two-place-container {
+  display: flex;
+  gap: 10px;
+  font-size: 40px;
+  width: 35%;
+}
+
+.place {
+  transition: background-color 0.3s ease; /* Плавное изменение цвета фона */
+}
+
+.place:hover {
+  background-color: #77b1f4;
+}
+
+.selected {
+  background-color: #72abec;
+  color: white;
+  border: solid 1px black;
+  transition: background-color 0.4s ease; /* Плавное изменение цвета фона для класса selected */
+}
+
+.button-order {
+  margin-top: 20px;
+  max-width: 200px;
+}

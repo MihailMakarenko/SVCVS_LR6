@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Заказ автобусных билетов</title>
+  </head>
+  <body>
+    <div class="seat-container">
+      <h2>Выберите места</h2>
+      <input type="text" id="customerName" placeholder="Ваше имя" />
+      <input type="date" id="travelDate" value="2024-11-11" />
+      <div id="seatVariants"></div>
+      <button class="button-order" onclick="bookTickets()">Заказать</button>
+      <ul id="bookingInfo"></ul>
+      <p>Отмена бронирования</p>
+      <input
+        type="text"
+        id="cancellationNumber"
+        placeholder="Укажите номер места"
+      />
+      <button onclick="cancelReservation()">Отменить бронирование</button>
+      <div>
+        <button onclick="downloadBooking('text/html')">Скачать в HTML</button>
+        <button onclick="downloadBooking('text/xml')">Скачать в XML</button>
+        <button onclick="downloadBooking('application/json')">
+          Скачать в JSON
+        </button>
+      </div>
+    </div>
+
+    <script>
+      // Загружаем варианты мест при загрузке страницы
+      window.onload = function () {
+        loadSeatVariants();
+        const travelDate = document.getElementById("travelDate");
+        travelDate.addEventListener("change", loadSeatVariants); // Добавление обработчика события
+      };
+
+      // Функция для загрузки вариантов мест
+      function loadSeatVariants() {
+        const date = document.getElementById("travelDate").value;
+        fetch(`/seatVariants`)
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error("Сеть ответила с ошибкой: " + response.status);
+            }
+            return response.json();
+          })
+          .then((data) => {
+            const variants = data[date] || []; // Получаем варианты для выбранной даты
+            displaySeatVariants(variants);
+          })
+          .catch((error) =>
+            console.error("Ошибка при получении данных:", error)
+          );
+      }
+
+      function displayBookingInfo(stat) {
+        const bookingList = document.getElementById("bookingInfo");
+        bookingList.innerHTML = "";
+        Object.keys(stat).forEach((key) => {
+          const li = document.createElement("li");
+          li.innerHTML = `На дату ${key}: ${stat[key]} свободных мест`;
+          bookingList.appendChild(li);
+        });
+      }
+
+      function uploadBookingInfo() {
+        fetch("/info", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        })
+          .then((response) => response.json())
+          .then((data) => displayBookingInfo(data));
+      }
+
+      // Изначальная загрузка информации
+      uploadBookingInfo();
+
+      // Функция для отображения вариантов мест
+      function displaySeatVariants(variants) {
+        const seatVariantsDiv = document.getElementById("seatVariants");
+        seatVariantsDiv.innerHTML = "";
+        variants.forEach((variant) => {
+          const input = document.createElement("input");
+          input.type = "checkbox";
+          input.name = "seatVariant";
+          input.value = variant.key;
+          const label = document.createElement("label");
+          label.innerHTML = variant.name;
+
+          if (variant.reserved) {
+            input.disabled = true;
+            input.checked = true;
+            label.style.color = "red"; // Меняем цвет метки для занятых мест
+            label.innerHTML += " (Забронировано)"; // Добавляем текст
+          }
+
+          seatVariantsDiv.appendChild(input);
+          seatVariantsDiv.appendChild(label);
+          seatVariantsDiv.appendChild(document.createElement("br"));
+        });
+      }
+
+      function cancelReservation() {
+        const cancellationInput = document.getElementById("cancellationNumber");
+        const seatNumber = cancellationInput.value.trim();
+        const date = document.getElementById("travelDate").value;
+
+        if (!seatNumber) {
+          alert("Пожалуйста, укажите номер места.");
+          return;
+        }
+
+        fetch("/cancellation", {
+          method: "DELETE",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            date: date,
+            placeKey: seatNumber,
+          }),
+        })
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error("Ошибка сети: " + response.status);
+            }
+            return response.text();
+          })
+          .then((message) => {
+            console.log("Бронирование отменено:", message);
+            alert(message); // Уведомление о результате отмены
+            loadSeatVariants(); // Обновляем варианты после отмены
+            uploadBookingInfo();
+          })
+          .catch((error) => {
+            console.error("Ошибка при отмене бронирования:", error);
+            alert("Произошла ошибка: " + error.message);
+          });
+      }
+
+      function bookTickets() {
+        const nameInput = document.getElementById("customerName");
+        const name = nameInput.value.trim(); // Убираем лишние пробелы
+        const date = document.getElementById("travelDate").value; // Получаем дату
+
+        if (!name) {
+          alert("Пожалуйста, введите ваше имя.");
+          return;
+        }
+
+        const selectedVariants = Array.from(
+          document.querySelectorAll('input[name="seatVariant"]:checked')
+        ).map((checkbox) => checkbox.value);
+
+        if (selectedVariants.length === 0) {
+          alert("Пожалуйста, выберите хотя бы один вариант.");
+          return;
+        }
+
+        fetch("/vote", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            name: name,
+            date: date,
+            keys: selectedVariants,
+          }),
+        })
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error("Ошибка сети: " + response.status);
+            }
+            return response.json();
+          })
+          .then((data) => {
+            loadSeatVariants();
+            uploadBookingInfo();
+            alert("Заказ успешно оформлен!"); // Уведомление о результате заказа
+          })
+          .catch((error) =>
+            console.error("Ошибка при отправке данных:", error)
+          );
+      }
+
+      function downloadBooking(accept) {
+        const headers = {
+          Accept: accept,
+        };
+
+        fetch("/voteDownload", { headers })
+          .then((response) => response.blob())
+          .then((blob) => {
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement("a");
+            a.href = url;
+            if (accept === "text/html") a.download = "заказБилетов.html";
+            else if (accept === "text/xml") a.download = "заказБилетов.xml";
+            else if (accept === "application/json")
+              a.download = "заказБилетов.json";
+            a.click();
+            window.URL.revokeObjectURL(url);
+          })
+          .catch((error) => {
+            console.error("Ошибка при загрузке файла:", error);
+          });
+      }
+    </script>
+  </body>
+</html>
